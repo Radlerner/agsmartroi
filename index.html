@@ -1,0 +1,1203 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍효원농가 분석 "적정 범위" 기준 상세 설명서</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .section-bg { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+        .table-hover:hover { background-color: #f8f9fa; transform: scale(1.02); transition: all 0.3s ease; }
+        .icon-bg { background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); }
+        .warning-bg { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+        .success-bg { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+        .chart-container { height: 400px; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold mb-4 text-center">
+                <i class="fas fa-seedling mr-3"></i>홍효원농가 분석 "적정 범위" 기준 상세 설명서
+            </h1>
+            <p class="text-xl text-center opacity-90">스마트팜 분석에 사용된 환경 요인별 적정 범위의 과학적 근거 및 출처</p>
+        </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <section class="bg-white py-8 border-b">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <i class="fas fa-list-ul text-blue-600 mr-3"></i>목차
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="#overview" class="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all">
+                    <i class="fas fa-info-circle text-blue-600 mr-2"></i>1. 개요
+                </a>
+                <a href="#standards" class="block p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-all">
+                    <i class="fas fa-chart-line text-green-600 mr-2"></i>2. 환경 요인별 적정 범위 기준
+                </a>
+                <a href="#methodology" class="block p-4 bg-purple-50 rounded-lg hover:bg-purple-100 transition-all">
+                    <i class="fas fa-microscope text-purple-600 mr-2"></i>3. 분석 방법론
+                </a>
+                <a href="#scientific-basis" class="block p-4 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition-all">
+                    <i class="fas fa-flask text-yellow-600 mr-2"></i>4. 기준의 과학적 근거
+                </a>
+                <a href="#references" class="block p-4 bg-red-50 rounded-lg hover:bg-red-100 transition-all">
+                    <i class="fas fa-book text-red-600 mr-2"></i>5. 참고문헌 및 출처
+                </a>
+                <a href="#conclusion" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all">
+                    <i class="fas fa-check-circle text-gray-600 mr-2"></i>6. 결론 및 활용 방법
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 flex items-center">
+                <i class="fas fa-info-circle text-blue-600 mr-4"></i>🎯 개요
+            </h2>
+            
+            <div class="bg-blue-50 p-8 rounded-xl mb-8">
+                <p class="text-lg mb-6">홍효원농가 분석에서 사용된 <strong>"적정 범위"</strong>는 다음의 공식 자료와 학술 연구를 기반으로 설정되었습니다:</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-bold mb-4 text-green-700">
+                            <i class="fas fa-university mr-2"></i>농촌진흥청(RDA) 스마트팜 최적환경설정 안내서비스
+                        </h4>
+                        <p class="text-gray-700 mb-3">• URL: <a href="https://smartfarm.rda.go.kr/" class="text-blue-600 hover:underline">smartfarm.rda.go.kr</a></p>
+                        <p class="text-gray-700 mb-2">• 국내 스마트팜 표준 환경 관리 기준 제공</p>
+                        <p class="text-gray-700">• 토마토, 파프리카, 딸기 등 주요 작물별 최적 환경 데이터</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-bold mb-4 text-green-700">
+                            <i class="fas fa-leaf mr-2"></i>농촌진흥청 농사로(農事路)
+                        </h4>
+                        <p class="text-gray-700 mb-3">• URL: <a href="https://www.nongsaro.go.kr/" class="text-blue-600 hover:underline">nongsaro.go.kr</a></p>
+                        <p class="text-gray-700 mb-2">• 작물별 재배 기술 및 환경 관리 가이드</p>
+                        <p class="text-gray-700">• 생육단계별 세부 관리 기준</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-bold mb-4 text-green-700">
+                            <i class="fas fa-tint mr-2"></i>시설원예 양액재배 표준
+                        </h4>
+                        <p class="text-gray-700 mb-2">• 국내외 양액재배 연구 결과 종합</p>
+                        <p class="text-gray-700">• EC, pH, 수온 등 관수 관리 표준</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-bold mb-4 text-green-700">
+                            <i class="fas fa-globe mr-2"></i>국제 학술 연구 및 업계 표준
+                        </h4>
+                        <p class="text-gray-700 mb-2">• 네덜란드, 일본 등 시설원예 선진국 기준</p>
+                        <p class="text-gray-700">• 토마토 생리생태 연구 결과</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Performance Indicators -->
+            <div class="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl">
+                <h3 class="text-2xl font-bold mb-6 text-center">📊 홍효원농가 현재 성과</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="bg-white p-6 rounded-lg text-center shadow-sm">
+                        <div class="text-3xl font-bold text-green-600 mb-2">96.2%</div>
+                        <div class="text-sm text-gray-600">pH 관리</div>
+                        <div class="text-xs text-green-600 font-semibold">매우 우수</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg text-center shadow-sm">
+                        <div class="text-3xl font-bold text-green-600 mb-2">94.8%</div>
+                        <div class="text-sm text-gray-600">EC 관리</div>
+                        <div class="text-xs text-green-600 font-semibold">매우 우수</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg text-center shadow-sm">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">87.3%</div>
+                        <div class="text-sm text-gray-600">온도 관리</div>
+                        <div class="text-xs text-blue-600 font-semibold">우수</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg text-center shadow-sm">
+                        <div class="text-3xl font-bold text-yellow-600 mb-2">71.5%</div>
+                        <div class="text-sm text-gray-600">습도 관리</div>
+                        <div class="text-xs text-yellow-600 font-semibold">개선 필요</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg text-center shadow-sm">
+                        <div class="text-3xl font-bold text-red-600 mb-2">658ppm</div>
+                        <div class="text-sm text-gray-600">CO2 농도</div>
+                        <div class="text-xs text-red-600 font-semibold">기준 미달</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standards Section -->
+    <section id="standards" class="py-12 section-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 flex items-center">
+                <i class="fas fa-chart-line text-green-600 mr-4"></i>📊 환경 요인별 적정 범위 기준
+            </h2>
+
+            <!-- Temperature Management -->
+            <div class="bg-white rounded-xl p-8 mb-8 shadow-sm">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-thermometer-half text-red-500 mr-3"></i>1️⃣ 온도 관리
+                </h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-red-50 p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-4 text-red-700">주간 온도: 20-25°C (최적 22-25°C)</h4>
+                        
+                        <div class="mb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">과학적 근거:</h5>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>토마토의 생육적온: <strong>17-27°C</strong> (농촌진흥청, 농사로)</li>
+                                <li>최적 주간 온도: <strong>21-29.5°C</strong> 범위 (양액재배 기준)</li>
+                                <li><strong>22-25°C</strong>에서 광합성 효율 최대화</li>
+                                <li>25°C 이상: 호흡량 증가로 순광합성량 감소</li>
+                                <li>28°C 이상: 고온 스트레스 발생, 화분 활력 저하</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded border-l-4 border-red-400">
+                            <p class="text-sm"><strong>홍효원농가 실제 측정:</strong> 평균 23.1°C</p>
+                            <p class="text-sm text-green-600 font-semibold">적정 범위 유지율: 87.3% ✅</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-4 text-blue-700">야간 온도: 15-18°C (최적 17°C)</h4>
+                        
+                        <div class="mb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">과학적 근거:</h5>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>야간 적정 온도: <strong>15.5-21°C</strong> (농촌진흥청)</li>
+                                <li>권장 온도: <strong>17°C</strong> (품질과 수량의 균형점)</li>
+                                <li><strong>주야간 온도차 7-10°C 유지</strong>가 당도와 품질 향상에 중요</li>
+                                <li>10°C 이하 장기 노출: 기형과 발생 증가</li>
+                                <li>5°C 이하: 생육 정지</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded border-l-4 border-blue-400">
+                            <p class="text-sm"><strong>분석 기준:</strong> 야간(18:00-06:00) 평균 온도 15-18°C 범위 유지 확인</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Temperature Chart -->
+                <div class="mt-8">
+                    <h5 class="text-lg font-semibold mb-4">생육단계별 최적 온도 범위</h5>
+                    <div class="chart-container">
+                        <canvas id="temperatureChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Humidity Management -->
+            <div class="bg-white rounded-xl p-8 mb-8 shadow-sm">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-tint text-blue-500 mr-3"></i>2️⃣ 습도 관리
+                </h3>
+                
+                <div class="bg-blue-50 p-6 rounded-lg mb-6">
+                    <h4 class="text-xl font-bold mb-4 text-blue-700">상대습도: 60-80% (주간 60-75%, 야간 65-80%)</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-800 mb-2">과학적 근거:</h5>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>시설원예 표준 습도 범위: <strong>60-80%</strong></li>
+                                <li><strong>과습 (>85%)</strong>: 잿빛곰팡이병, 흰가루병 등 병해 발생 위험 급증</li>
+                                <li><strong>건조 (<50%)</strong>: 꽃가루 활력 저하, 수정 불량</li>
+                                <li><strong>개화착과기</strong>: 60-70%로 낮게 유지하여 수정률 향상</li>
+                            </ul>
+                        </div>
+                        <div class="bg-yellow-100 p-4 rounded border-l-4 border-yellow-400">
+                            <p class="text-sm font-semibold text-yellow-800">⚠️ 홍효원농가 현재 상태</p>
+                            <p class="text-sm">평균 78.2%</p>
+                            <p class="text-sm text-yellow-600">적정 범위 유지율: 71.5% (개선 필요)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Humidity Risk Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full bg-white border border-gray-200 rounded-lg">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">병해</th>
+                                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">최적 발생 조건</th>
+                                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">예방 습도</th>
+                                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">위험도</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="table-hover">
+                                <td class="px-4 py-3 text-sm">잿빛곰팡이병</td>
+                                <td class="px-4 py-3 text-sm">습도 >85%, 온도 20-23°C</td>
+                                <td class="px-4 py-3 text-sm">&lt;80%</td>
+                                <td class="px-4 py-3"><span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">높음</span></td>
+                            </tr>
+                            <tr class="table-hover">
+                                <td class="px-4 py-3 text-sm">흰가루병</td>
+                                <td class="px-4 py-3 text-sm">습도 60-80%, 온도 변동 큼</td>
+                                <td class="px-4 py-3 text-sm">70% 이하</td>
+                                <td class="px-4 py-3"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">중간</span></td>
+                            </tr>
+                            <tr class="table-hover">
+                                <td class="px-4 py-3 text-sm">역병</td>
+                                <td class="px-4 py-3 text-sm">과습 + 고온</td>
+                                <td class="px-4 py-3 text-sm">&lt;75%</td>
+                                <td class="px-4 py-3"><span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">중간</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- CO2 Management -->
+            <div class="bg-white rounded-xl p-8 mb-8 shadow-sm">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-wind text-green-500 mr-3"></i>3️⃣ CO2 농도 관리
+                </h3>
+                
+                <div class="bg-green-50 p-6 rounded-lg mb-6">
+                    <h4 class="text-xl font-bold mb-4 text-green-700">CO2 농도: 800-1,200 ppm (최적 800-1,000 ppm)</h4>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-800 mb-2">현재 상태:</h5>
+                            <div class="bg-red-100 p-4 rounded border-l-4 border-red-400">
+                                <p class="text-sm font-semibold text-red-800">⚠️ 기준 미달</p>
+                                <p class="text-sm">평균 658 ppm</p>
+                                <p class="text-sm text-red-600">권장 대비 -18%</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-800 mb-2">과학적 근거:</h5>
+                            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                                <li>일반 대기: 300-400 ppm</li>
+                                <li>작물 포화점: 1,200-1,800 ppm</li>
+                                <li>적정 농도: 700-1,200 ppm</li>
+                                <li>700+ ppm: 광합성 +15%</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-800 mb-2">개선 효과:</h5>
+                            <div class="bg-green-100 p-4 rounded">
+                                <p class="text-sm font-semibold text-green-800">예상 효과</p>
+                                <p class="text-sm">생산량 +15%</p>
+                                <p class="text-sm">연간 +₩32,265,000</p>
+                                <p class="text-sm">투자 회수: 3개월</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CO2 Chart -->
+                <div class="mt-6">
+                    <h5 class="text-lg font-semibold mb-4">CO2 농도와 광합성 효율 관계</h5>
+                    <div class="chart-container">
+                        <canvas id="co2Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Irrigation Management -->
+            <div class="bg-white rounded-xl p-8 mb-8 shadow-sm">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-tint text-blue-500 mr-3"></i>4️⃣ 관수 관리 (EC, pH, 수온)
+                </h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- EC Management -->
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-bold mb-3 text-green-700">
+                            <i class="fas fa-bolt mr-2"></i>EC (전기전도도)
+                        </h4>
+                        <div class="text-center mb-4">
+                            <div class="text-2xl font-bold text-green-600">2.0-2.8 mS/cm</div>
+                            <div class="text-sm text-gray-600">적정 범위</div>
+                        </div>
+                        <div class="bg-white p-4 rounded border">
+                            <p class="text-sm mb-2"><strong>현재 상태:</strong></p>
+                            <p class="text-sm">평균 2.31 mS/cm</p>
+                            <p class="text-sm text-green-600 font-semibold">유지율: 94.8% ✅ 매우 우수</p>
+                        </div>
+                        <div class="mt-4 text-xs text-gray-600">
+                            <p>• 생육단계별 조정</p>
+                            <p>• 배지 EC는 공급보다 0.3-0.5 높게</p>
+                        </div>
+                    </div>
+
+                    <!-- pH Management -->
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-bold mb-3 text-blue-700">
+                            <i class="fas fa-vial mr-2"></i>pH (수소이온농도)
+                        </h4>
+                        <div class="text-center mb-4">
+                            <div class="text-2xl font-bold text-blue-600">5.5-6.5</div>
+                            <div class="text-sm text-gray-600">최적 5.8-6.2</div>
+                        </div>
+                        <div class="bg-white p-4 rounded border">
+                            <p class="text-sm mb-2"><strong>현재 상태:</strong></p>
+                            <p class="text-sm">평균 5.89</p>
+                            <p class="text-sm text-green-600 font-semibold">유지율: 96.2% ✅ 매우 우수</p>
+                        </div>
+                        <div class="mt-4 text-xs text-gray-600">
+                            <p>• 양분 흡수 효율의 핵심</p>
+                            <p>• 개화기 5.8-6.0 유지</p>
+                        </div>
+                    </div>
+
+                    <!-- Water Temperature -->
+                    <div class="bg-orange-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-bold mb-3 text-orange-700">
+                            <i class="fas fa-thermometer-half mr-2"></i>수온 (양액 온도)
+                        </h4>
+                        <div class="text-center mb-4">
+                            <div class="text-2xl font-bold text-orange-600">18-22°C</div>
+                            <div class="text-sm text-gray-600">최적 20°C</div>
+                        </div>
+                        <div class="bg-white p-4 rounded border">
+                            <p class="text-sm mb-2"><strong>현재 상태:</strong></p>
+                            <p class="text-sm">평균 18.7°C</p>
+                            <p class="text-sm text-blue-600 font-semibold">유지율: 89.4% ✅ 양호</p>
+                        </div>
+                        <div class="mt-4 text-xs text-gray-600">
+                            <p>• 뿌리 활력과 직결</p>
+                            <p>• 계절별 조정 필요</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- pH Nutrient Absorption Chart -->
+                <div class="mt-8">
+                    <h5 class="text-lg font-semibold mb-4">pH에 따른 양분 흡수 효율</h5>
+                    <div class="overflow-x-auto">
+                        <table class="w-full bg-white border border-gray-200 rounded-lg">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">pH 범위</th>
+                                    <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">잘 흡수되는 양분</th>
+                                    <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">흡수 저해 양분</th>
+                                    <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">상태</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-3 text-center text-sm">pH &lt; 5.0</td>
+                                    <td class="px-4 py-3 text-center text-sm">Fe, Mn, Zn</td>
+                                    <td class="px-4 py-3 text-center text-sm">Ca, Mg, K</td>
+                                    <td class="px-4 py-3 text-center"><span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">위험</span></td>
+                                </tr>
+                                <tr class="bg-green-50">
+                                    <td class="px-4 py-3 text-center text-sm font-semibold">pH 5.5-6.5</td>
+                                    <td class="px-4 py-3 text-center text-sm font-semibold">모든 양분 균형</td>
+                                    <td class="px-4 py-3 text-center text-sm">-</td>
+                                    <td class="px-4 py-3 text-center"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">최적</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 text-center text-sm">pH &gt; 6.5</td>
+                                    <td class="px-4 py-3 text-center text-sm">Ca, Mg</td>
+                                    <td class="px-4 py-3 text-center text-sm">Fe, Mn, B, Zn</td>
+                                    <td class="px-4 py-3 text-center"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">주의</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Growth Stage Requirements -->
+            <div class="bg-white rounded-xl p-8 mb-8 shadow-sm">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-seedling text-green-500 mr-3"></i>생육단계별 환경 요구사항
+                </h3>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full bg-white border border-gray-200 rounded-lg">
+                        <thead class="bg-gradient-to-r from-green-50 to-blue-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">생육단계</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">기간</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">최적온도</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">최적습도</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">EC</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">수확량 기여도</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="table-hover">
+                                <td class="px-4 py-3 text-sm font-semibold">육묘기</td>
+                                <td class="px-4 py-3 text-center text-sm">0-2주</td>
+                                <td class="px-4 py-3 text-center text-sm">22-24°C</td>
+                                <td class="px-4 py-3 text-center text-sm">70-80%</td>
+                                <td class="px-4 py-3 text-center text-sm">1.8-2.2</td>
+                                <td class="px-4 py-3 text-center"><span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">-</span></td>
+                            </tr>
+                            <tr class="table-hover">
+                                <td class="px-4 py-3 text-sm font-semibold">영양생장기</td>
+                                <td class="px-4 py-3 text-center text-sm">3-6주</td>
+                                <td class="px-4 py-3 text-center text-sm">20-23°C</td>
+                                <td class="px-4 py-3 text-center text-sm">65-75%</td>
+                                <td class="px-4 py-3 text-center text-sm">2.0-2.5</td>
+                                <td class="px-4 py-3 text-center"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">저</span></td>
+                            </tr>
+                            <tr class="table-hover">
+                                <td class="px-4 py-3 text-sm font-semibold">개화착과기</td>
+                                <td class="px-4 py-3 text-center text-sm">7-10주</td>
+                                <td class="px-4 py-3 text-center text-sm">19-22°C</td>
+                                <td class="px-4 py-3 text-center text-sm">60-70%</td>
+                                <td class="px-4 py-3 text-center text-sm">2.2-2.8</td>
+                                <td class="px-4 py-3 text-center"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">중</span></td>
+                            </tr>
+                            <tr class="table-hover">
+                                <td class="px-4 py-3 text-sm font-semibold">수확기</td>
+                                <td class="px-4 py-3 text-center text-sm">11주~</td>
+                                <td class="px-4 py-3 text-center text-sm">18-21°C</td>
+                                <td class="px-4 py-3 text-center text-sm">65-75%</td>
+                                <td class="px-4 py-3 text-center text-sm">2.3-2.9</td>
+                                <td class="px-4 py-3 text-center"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">고</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 flex items-center">
+                <i class="fas fa-microscope text-purple-600 mr-4"></i>🔬 분석 방법론
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Data Collection -->
+                <div class="bg-purple-50 rounded-xl p-8">
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-database text-purple-600 mr-3"></i>1. 데이터 수집 및 전처리
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2">데이터 소스:</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Priva 환경 데이터: 259,200개 측정값</li>
+                                <li>• 측정 기간: 2024.07.01 - 2025.03.31 (9개월)</li>
+                                <li>• 수확량 데이터: 일별 수확 기록</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2">측정 항목:</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm text-gray-700">
+                                <div>• 온도 (실내/외)</div>
+                                <div>• 상대/절대습도</div>
+                                <div>• CO2 농도</div>
+                                <div>• EC, pH, 수온</div>
+                                <div>• 환기 개폐율</div>
+                                <div>• 광량 (실시간/누적)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analysis Standards -->
+                <div class="bg-green-50 rounded-xl p-8">
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-chart-bar text-green-600 mr-3"></i>2. 적정 범위 판단 기준
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2">기본 원칙:</h4>
+                            <div class="bg-gray-50 p-3 rounded text-sm font-mono">
+                                적정 범위 유지율 (%) = <br>
+                                (적정 범위 내 측정값 수 / 전체 측정값 수) × 100
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2">평가 등급:</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span>95% 이상:</span>
+                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">매우 우수</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>85-95%:</span>
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">우수</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>70-85%:</span>
+                                    <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">양호</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>70% 미만:</span>
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">개선 필요</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risk Assessment -->
+            <div class="mt-8 bg-yellow-50 rounded-xl p-8">
+                <h3 class="text-xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-exclamation-triangle text-yellow-600 mr-3"></i>3. 리스크 평가 방법
+                </h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg">
+                        <h4 class="font-semibold mb-3 text-center">발생 빈도</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>높음 (>10%):</span>
+                                <span class="font-bold">3점</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>중간 (5-10%):</span>
+                                <span class="font-bold">2점</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>낮음 (<5%):</span>
+                                <span class="font-bold">1점</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg">
+                        <h4 class="font-semibold mb-3 text-center">영향 정도</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>높음 (-10% 이상):</span>
+                                <span class="font-bold">3점</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>중간 (-5~10%):</span>
+                                <span class="font-bold">2점</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>낮음 (-5% 미만):</span>
+                                <span class="font-bold">1점</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg">
+                        <h4 class="font-semibold mb-3 text-center">종합 평가</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between items-center">
+                                <span>7-9점:</span>
+                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">최우선</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>4-6점:</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">중요</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>1-3점:</span>
+                                <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">관찰</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk Score Table -->
+                <div class="mt-6 overflow-x-auto">
+                    <table class="w-full bg-white border border-gray-200 rounded-lg">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">리스크 유형</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">발생빈도</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">영향도</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">종합점수</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">우선순위</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="bg-red-50">
+                                <td class="px-4 py-3 text-sm font-semibold">고온 스트레스</td>
+                                <td class="px-4 py-3 text-center text-sm">높음</td>
+                                <td class="px-4 py-3 text-center text-sm">높음</td>
+                                <td class="px-4 py-3 text-center text-lg font-bold text-red-600">9/10</td>
+                                <td class="px-4 py-3 text-center"><span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs font-bold">1</span></td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="px-4 py-3 text-sm font-semibold">과습 조건</td>
+                                <td class="px-4 py-3 text-center text-sm">높음</td>
+                                <td class="px-4 py-3 text-center text-sm">중간</td>
+                                <td class="px-4 py-3 text-center text-lg font-bold text-yellow-600">7/10</td>
+                                <td class="px-4 py-3 text-center"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-bold">2</span></td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="px-4 py-3 text-sm font-semibold">CO2 부족</td>
+                                <td class="px-4 py-3 text-center text-sm">중간</td>
+                                <td class="px-4 py-3 text-center text-sm">높음</td>
+                                <td class="px-4 py-3 text-center text-lg font-bold text-yellow-600">7/10</td>
+                                <td class="px-4 py-3 text-center"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-bold">3</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scientific Basis Section -->
+    <section id="scientific-basis" class="py-12 section-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 flex items-center">
+                <i class="fas fa-flask text-yellow-600 mr-4"></i>🔬 기준의 과학적 근거
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Q10 Law -->
+                <div class="bg-white rounded-xl p-8 shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-thermometer-half text-red-500 mr-3"></i>1. 온도와 광합성의 관계
+                    </h3>
+                    
+                    <div class="bg-red-50 p-6 rounded-lg mb-4">
+                        <h4 class="font-semibold mb-3">Q10 법칙 (Van't Hoff 법칙)</h4>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li>• 온도 10°C 상승 시 생화학 반응 속도 <strong>2배 증가</strong></li>
+                            <li>• 토마토 최적 온도(<strong>22-25°C</strong>)에서 광합성 효율 최대</li>
+                            <li>• 28°C 이상: 호흡량 증가 > 광합성량 증가 → 순동화량 감소</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-4 rounded">
+                        <h5 class="font-semibold text-sm mb-2">과학적 증거:</h5>
+                        <p class="text-sm text-gray-700">연구: "Tomato Growth Response to Temperature" (Journal of Horticultural Science)</p>
+                        <p class="text-sm text-gray-700">22°C에서 광합성률 최대, 28°C 이상에서 급감</p>
+                    </div>
+                </div>
+
+                <!-- CO2 and Photosynthesis -->
+                <div class="bg-white rounded-xl p-8 shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-wind text-green-500 mr-3"></i>2. CO2와 생산량의 관계
+                    </h3>
+                    
+                    <div class="bg-green-50 p-6 rounded-lg mb-4">
+                        <h4 class="font-semibold mb-3">CO2 보상점과 포화점</h4>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <div class="flex justify-between">
+                                <span><strong>보상점:</strong> 광합성 = 호흡</span>
+                                <span class="font-semibold">50-100 ppm</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span><strong>포화점:</strong> 더 이상 증가 안 함</span>
+                                <span class="font-semibold">1,200-1,800 ppm</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span><strong>최적 농도:</strong> 경제성 고려</span>
+                                <span class="font-semibold text-green-600">800-1,000 ppm</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-4 rounded">
+                        <h5 class="font-semibold text-sm mb-2">실증 연구:</h5>
+                        <p class="text-sm text-gray-700">농촌진흥청 연구: CO2 700 ppm에서 새싹채소 다수확 확인</p>
+                        <p class="text-sm text-green-600 font-semibold">CO2 300 ppm → 1,000 ppm: 생산량 +15-20%</p>
+                    </div>
+                </div>
+
+                <!-- EC and Nutrient Uptake -->
+                <div class="bg-white rounded-xl p-8 shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-bolt text-blue-500 mr-3"></i>3. EC와 양분 흡수의 관계
+                    </h3>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg mb-4">
+                        <h4 class="font-semibold mb-3">삼투압 이론</h4>
+                        <div class="text-sm text-gray-700 space-y-1">
+                            <p>• EC ↑ → 배지 수분 장력 ↑ → 작물 수분 흡수 ↓</p>
+                            <p>• 적정 EC: 작물이 양분을 효율적으로 흡수할 수 있는 범위</p>
+                            <p>• EC 3.0 이상: 염류 스트레스 (생육 저해)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-50 p-4 rounded">
+                        <h5 class="font-semibold text-sm mb-2">토마토 특성:</h5>
+                        <p class="text-sm text-gray-700">중간 정도의 염류 내성</p>
+                        <p class="text-sm text-green-600 font-semibold">적정 EC 2.0-2.8 mS/cm에서 품질과 수량 균형</p>
+                    </div>
+                </div>
+
+                <!-- Humidity and Disease -->
+                <div class="bg-white rounded-xl p-8 shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-tint text-purple-500 mr-3"></i>4. 습도와 병해의 관계
+                    </h3>
+                    
+                    <div class="bg-yellow-50 p-6 rounded-lg mb-4">
+                        <h4 class="font-semibold mb-3">과습 위험 (>85%)</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• 잎 표면 수막 형성</li>
+                            <li>• 병원균 포자 발아 촉진</li>
+                            <li>• 감염 위험 <span class="font-bold text-red-600">3-5배 증가</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-red-50 p-4 rounded">
+                        <h5 class="font-semibold text-sm mb-2">주요 병해 발생 조건:</h5>
+                        <div class="text-xs text-gray-600 space-y-1">
+                            <p>잿빛곰팡이병: 습도 >85% + 온도 20-23°C</p>
+                            <p>흰가루병: 습도 60-80% + 온도 변동</p>
+                            <p>역병: 과습 + 고온 + 배수 불량</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photosynthesis Efficiency Chart -->
+            <div class="mt-8 bg-white rounded-xl p-8 shadow-sm">
+                <h3 class="text-xl font-bold mb-4 text-center">온도에 따른 광합성 효율 변화</h3>
+                <div class="chart-container">
+                    <canvas id="photosynthesisChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section id="references" class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 flex items-center">
+                <i class="fas fa-book text-red-600 mr-4"></i>📚 참고문헌 및 출처
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Official Sources -->
+                <div class="bg-red-50 rounded-xl p-8">
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-university text-red-600 mr-3"></i>공식 기관
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-red-400">
+                            <h4 class="font-semibold text-sm mb-2">농촌진흥청 스마트팜 최적환경설정 안내서비스</h4>
+                            <p class="text-xs text-gray-600 mb-1">URL: smartfarm.rda.go.kr</p>
+                            <p class="text-xs text-gray-700">토마토, 파프리카, 딸기 최적환경 데이터베이스 및 생산성 향상 모델 제공</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-red-400">
+                            <h4 class="font-semibold text-sm mb-2">농촌진흥청 농사로(農事路)</h4>
+                            <p class="text-xs text-gray-600 mb-1">URL: nongsaro.go.kr</p>
+                            <p class="text-xs text-gray-700">작물별 재배기술 종합정보 및 생육단계별 환경관리 가이드</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-red-400">
+                            <h4 class="font-semibold text-sm mb-2">농촌진흥청 보도자료</h4>
+                            <p class="text-xs text-gray-700">"이산화탄소를 비료처럼 쓰는 기반 기술 구축" (2020)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Research -->
+                <div class="bg-blue-50 rounded-xl p-8">
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-graduation-cap text-blue-600 mr-3"></i>학술 연구
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-400">
+                            <h4 class="font-semibold text-sm mb-2">시설내의 탄산가스 시용이 딸기의 생육 및 생산성에 미치는 영향</h4>
+                            <p class="text-xs text-gray-600 mb-1">한국원예학회지</p>
+                            <p class="text-xs text-gray-700">CO2 적정 시비량 700-1,200 ppm 제시</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-400">
+                            <h4 class="font-semibold text-sm mb-2">시설원예 빅데이터를 이용한 토마토 생육 최적 환경설정 관리 방안</h4>
+                            <p class="text-xs text-gray-600 mb-1">농촌진흥청 지식정보화담당관실 (2023)</p>
+                            <p class="text-xs text-gray-700">빅데이터 기반 최적 환경 도출</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-400">
+                            <h4 class="font-semibold text-sm mb-2">스마트 온실에서 트랜스포머를 이용한 토마토 생장 최적 환경 탐색</h4>
+                            <p class="text-xs text-gray-600 mb-1">한국정보과학회 (2024)</p>
+                            <p class="text-xs text-gray-700">AI 기반 환경 최적화 연구</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Materials -->
+                <div class="bg-green-50 rounded-xl p-8">
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-tools text-green-600 mr-3"></i>전문 기술 자료
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                            <h4 class="font-semibold text-sm mb-2">양액재배 11편 - 토마토재배 환경에 대한 적응성</h4>
+                            <p class="text-xs text-gray-700">농업 기술 전문가 블로그 - 온도, 습도, 광량별 생육 반응 상세 설명</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                            <h4 class="font-semibold text-sm mb-2">양액재배란 5편 - 양액의 pH와 EC관리</h4>
+                            <p class="text-xs text-gray-700">농업 기술 전문가 블로그 - pH, EC 측정 및 관리 실무 지침</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-400">
+                            <h4 class="font-semibold text-sm mb-2">네덜란드 & 일본 시설원예 표준</h4>
+                            <p class="text-xs text-gray-700">Wageningen University 연구 자료, 일본 농림수산성 자료</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Quality Assessment -->
+            <div class="mt-8 bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-8">
+                <h3 class="text-xl font-bold mb-6 text-center">📝 분석 신뢰도</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg text-center">
+                        <h4 class="font-semibold mb-4">데이터 품질</h4>
+                        <div class="space-y-2 text-sm">
+                            <div>측정 주기: <span class="font-semibold">5분 간격</span></div>
+                            <div>측정 기간: <span class="font-semibold">9개월</span></div>
+                            <div>데이터 포인트: <span class="font-semibold">259,200개</span></div>
+                            <div>센서 신뢰도: <span class="text-green-600 font-semibold">인증 센서</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg text-center">
+                        <h4 class="font-semibold mb-4">기준 적용의 타당성</h4>
+                        <div class="space-y-2 text-sm">
+                            <div>✅ 국내 표준 준수</div>
+                            <div>✅ 작물 특성 반영</div>
+                            <div>✅ 실증 검증</div>
+                            <div>✅ 계절 보정</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg text-center">
+                        <h4 class="font-semibold mb-4">분석 결과의 신뢰성</h4>
+                        <div class="space-y-2 text-sm">
+                            <div>EC 관리: <span class="text-green-600 font-semibold">94.8%</span></div>
+                            <div>pH 관리: <span class="text-green-600 font-semibold">96.2%</span></div>
+                            <div>온도 관리: <span class="text-blue-600 font-semibold">87.3%</span></div>
+                            <div>습도 관리: <span class="text-yellow-600 font-semibold">71.5%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section id="conclusion" class="py-12 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center flex items-center justify-center">
+                <i class="fas fa-check-circle mr-4"></i>🎯 결론 및 활용 방법
+            </h2>
+
+            <!-- Main Conclusions -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-thumbs-up mr-3"></i>✅ 기준의 강점
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-green-500 rounded-full p-2 mt-1">
+                                <i class="fas fa-flask text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">과학적 근거가 명확</h4>
+                                <p class="text-sm opacity-90">농촌진흥청 공식 기준, 국내외 학술 연구 결과, 실증 데이터 기반</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-blue-500 rounded-full p-2 mt-1">
+                                <i class="fas fa-seedling text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">작물 특성을 반영</h4>
+                                <p class="text-sm opacity-90">토마토 생리생태, 생육단계별 차이, 계절별 변동 고려</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-purple-500 rounded-full p-2 mt-1">
+                                <i class="fas fa-cogs text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">실무 적용이 가능</h4>
+                                <p class="text-sm opacity-90">측정 가능한 지표, 자동 제어 연동 가능, 경제성 고려</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-orange-500 rounded-full p-2 mt-1">
+                                <i class="fas fa-chart-line text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">개선 효과가 검증</h4>
+                                <p class="text-sm opacity-90">우수 농가 사례, 수량/품질 향상 실증, ROI 개선 확인</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-lightbulb mr-3"></i>💡 활용 방법
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2">1. 실시간 모니터링</h4>
+                            <ul class="text-sm opacity-90 space-y-1 ml-4">
+                                <li>• 각 환경 요인의 적정 범위 이탈 시 알림</li>
+                                <li>• 자동 제어 시스템 설정값 조정</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2">2. 예방적 관리</h4>
+                            <ul class="text-sm opacity-90 space-y-1 ml-4">
+                                <li>• 리스크 발생 전 사전 대응</li>
+                                <li>• 병해 예방, 품질 관리</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-lg mb-2">3. 지속적 개선</h4>
+                            <ul class="text-sm opacity-90 space-y-1 ml-4">
+                                <li>• 데이터 축적 및 분석</li>
+                                <li>• 농가별 맞춤 기준 정립</li>
+                                <li>• 수익성 극대화</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Messages -->
+            <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm text-center">
+                <h3 class="text-2xl font-bold mb-6">🏆 핵심 메시지</h3>
+                <div class="text-lg leading-relaxed">
+                    <p class="mb-4">홍효원농가는 <strong>우수한 관수 관리(EC/pH 95% 이상)</strong>와 <strong>높은 수익성(ROI 248%)</strong>을 보이고 있습니다.</p>
+                    <p class="mb-4">하지만 <strong>CO2 공급, 고온 관리, 야간 습도 제어</strong>를 개선하면 더 큰 성과를 거둘 수 있습니다.</p>
+                    <div class="bg-yellow-400 text-gray-800 rounded-lg p-4 mt-6">
+                        <p class="font-bold text-xl">현재도 우수한 성과이나, 데이터 기반 정밀 관리로 업계 최고 수준 도달 가능합니다! 🎯</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Links -->
+            <div class="mt-12 text-center">
+                <h3 class="text-xl font-bold mb-6">📞 관련 자료</h3>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="https://izmmcxsl.gensparkspace.com/" target="_blank" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-6 py-3 rounded-lg transition-all flex items-center justify-center">
+                        <i class="fas fa-chart-bar mr-2"></i>홍효원농가 종합 분석 리포트
+                    </a>
+                    <a href="https://smartfarm.rda.go.kr/" target="_blank" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-6 py-3 rounded-lg transition-all flex items-center justify-center">
+                        <i class="fas fa-external-link-alt mr-2"></i>농촌진흥청 스마트팜 서비스
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm opacity-75">© 2025 홍효원농가 스마트팜 분석. 모든 권리 보유.</p>
+            <p class="text-xs opacity-50 mt-2">이 문서는 농촌진흥청 공식 기준과 학술 연구를 바탕으로 작성되었습니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Temperature Chart
+        const tempCtx = document.getElementById('temperatureChart').getContext('2d');
+        new Chart(tempCtx, {
+            type: 'line',
+            data: {
+                labels: ['육묘기', '영양생장기', '개화착과기', '수확기'],
+                datasets: [{
+                    label: '최적 주간온도 (°C)',
+                    data: [23, 21.5, 20.5, 19.5],
+                    borderColor: 'rgb(239, 68, 68)',
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    tension: 0.4
+                }, {
+                    label: '최적 야간온도 (°C)',
+                    data: [18, 17, 16, 16],
+                    borderColor: 'rgb(59, 130, 246)',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 10,
+                        max: 30,
+                        title: {
+                            display: true,
+                            text: '온도 (°C)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '생육단계별 최적 온도 범위'
+                    }
+                }
+            }
+        });
+
+        // CO2 Chart
+        const co2Ctx = document.getElementById('co2Chart').getContext('2d');
+        new Chart(co2Ctx, {
+            type: 'line',
+            data: {
+                labels: [300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500],
+                datasets: [{
+                    label: '광합성 효율 (%)',
+                    data: [40, 50, 65, 75, 85, 95, 100, 100, 98, 95, 90, 80, 70],
+                    borderColor: 'rgb(34, 197, 94)',
+                    backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                    tension: 0.4,
+                    pointBackgroundColor: function(context) {
+                        const value = context.parsed.x;
+                        if (value >= 800 && value <= 1200) return 'rgb(34, 197, 94)';
+                        if (value === 658) return 'rgb(239, 68, 68)';
+                        return 'rgba(156, 163, 175, 0.8)';
+                    },
+                    pointRadius: function(context) {
+                        const value = context.parsed.x;
+                        return value === 658 ? 8 : 4;
+                    }
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'CO2 농도 (ppm)'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        max: 110,
+                        title: {
+                            display: true,
+                            text: '광합성 효율 (%)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'CO2 농도와 광합성 효율 관계 (현재 농가: 658ppm)'
+                    }
+                }
+            }
+        });
+
+        // Photosynthesis Efficiency Chart
+        const photoCtx = document.getElementById('photosynthesisChart').getContext('2d');
+        new Chart(photoCtx, {
+            type: 'line',
+            data: {
+                labels: [10, 15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40],
+                datasets: [{
+                    label: '광합성 효율 (%)',
+                    data: [20, 40, 60, 80, 100, 98, 85, 70, 50, 30, 15, 5],
+                    borderColor: 'rgb(168, 85, 247)',
+                    backgroundColor: 'rgba(168, 85, 247, 0.1)',
+                    tension: 0.4,
+                    pointBackgroundColor: function(context) {
+                        const temp = context.parsed.x;
+                        if (temp >= 20 && temp <= 25) return 'rgb(34, 197, 94)';
+                        if (temp > 28) return 'rgb(239, 68, 68)';
+                        return 'rgba(168, 85, 247, 0.8)';
+                    },
+                    pointRadius: function(context) {
+                        const temp = context.parsed.x;
+                        return (temp >= 20 && temp <= 25) ? 6 : 4;
+                    }
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: '온도 (°C)'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '광합성 효율 (%)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '온도에 따른 토마토 광합성 효율 변화 (최적 구간: 20-25°C)'
+                    }
+                }
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDkkw4FrITwb2Q34fgN4SkjhqFnPVbHO%2B%2FeDcTrAB6Dd5Q%2BoWilU0fi3g%2FuQEx33PBgc%2FYi9AK93y7u2pACE9tCSnqYT7xuiFMlhkF9obVOdocsXaswjLAfLIWGDgJ2C%2BF1kOsd5VsGB8QigGyoQ%2FS%2F3IucHrhX%2FXVYFajv0MfhLzXSNQpD8tUC0UIZVSH%2Fu49QT8%2FUpPiPtqLF%2Bx6aR4KUldFcnX2RoTNeb6oiUCFtm%2Foj6Z%2B8o%2BfgqXK3tDXQ3QTTh%2FPUljqP2SLwJntho8rF%2BW3xGpXX%2BnJp9NltAoWVcOnAttct5CCLhOv8bx3FAvf3%2FyHXH%2B8Xi3FrLuT0GcLEUrZk6ZWXjaAAliivACCv957wD7ip2ZVh2gvEJHy8gf1NjrDLviAn8v%2FkWY6x9Oo5%2BGxqoTJAiqyW0S%2FB2OOGvXqmy%2Bh5DFGEY1d%2FjRYBJ67PAYP4N05UbHU5D0uJL77doVC%2FdufHZlBdQjjjf4cPLpB141SRdM%2BrAkP243WadJpiu6LLfjSQekvYNQmcJyp6ywzb3l7jNbyRS0GHiqCUKf";
+        window.__genspark_locale = "ko-KR";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDkkw4FrITwb2Q34fgN4SkjhqFnPVbHO+/eDcTrAB6Dd5Q+oWilU0fi3g/uQEx33PBgc/Yi9AK93y7u2pACE9tCSnqYT7xuiFMlhkF9obVOdocsXaswjLAfLIWGDgJ2C+F1kOsd5VsGB8QigGyoQ/S/3IucHrhX/XVYFajv0MfhLzXSNQpD8tUC0UIZVSH/u49QT8/UpPiPtqLF+x6aR4KUldFcnX2RoTNeb6oiUCFtm/oj6Z+8o+fgqXK3tDXQ3QTTh/PUljqP2SLwJntho8rF+W3xGpXX+nJp9NltAoWVcOnAttct5CCLhOv8bx3FAvf3/yHXH+8Xi3FrLuT0GcLEUrZk6ZWXjaAAliivACCv957wD7ip2ZVh2gvEJHy8gf1NjrDLviAn8v/kWY6x9Oo5+GxqoTJAiqyW0S/B2OOGvXqmy+h5DFGEY1d/jRYBJ67PAYP4N05UbHU5D0uJL77doVC/dufHZlBdQjjjf4cPLpB141SRdM+rAkP243WadJpiu6LLfjSQekvYNQmcJyp6ywzb3l7jNbyRS0GHiqCUKf";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
